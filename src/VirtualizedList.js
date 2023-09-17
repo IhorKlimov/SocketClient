@@ -21,7 +21,7 @@ export default function VirtualizedList() {
     }, []);
     const webSocket = useMemo(() => {
         console.log("memo")
-        return io('ws://localhost:443/', { transports : ['websocket']});
+        return io('ws://socketserver-wrlm.onrender.com', { transports : ['websocket']});
     }, []);
 
     webSocket.on('message', (event) => {
